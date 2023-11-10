@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/chatApp/static/css/main.3e7bfb6f.css",
+    "main.js": "/chatApp/static/js/main.d6f6c338.js",
+    "static/js/787.20416dff.chunk.js": "/chatApp/static/js/787.20416dff.chunk.js",
+    "static/media/Akon - Smack That (Official Music Video) ft. Eminem.mp3": "/chatApp/static/media/Akon - Smack That (Official Music Video) ft. Eminem.35228881c6644bc796be.mp3",
+    "index.html": "/chatApp/index.html",
+    "main.3e7bfb6f.css.map": "/chatApp/static/css/main.3e7bfb6f.css.map",
+    "main.d6f6c338.js.map": "/chatApp/static/js/main.d6f6c338.js.map",
+    "787.20416dff.chunk.js.map": "/chatApp/static/js/787.20416dff.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3e7bfb6f.css",
+    "static/js/main.d6f6c338.js"
+  ]
+}

@@ -5,7 +5,7 @@ import { FaSearch } from "react-icons/fa";
 import "./dictionary.css"
 
 export default function Dictionary(props) {
-    const [word,Setword] = useState("hello")
+    const [word,Setword] = useState("")
     const [def,Setdef] = useState(" ")
     const[incorrect, Setincorrect] = useState("")
     const [partofspeech,Setpartofspeech] = useState(" ")
@@ -22,8 +22,11 @@ export default function Dictionary(props) {
 //     }
 
 // })
+
 function getinfo(){
 let newword = document.getElementById('input').value 
+document.getElementById("btn2").style.display = "none"
+document.getElementById("btn").style.display = "block"
 console.log("newword", newword)
 let datanew = axios.get("https://api.dictionaryapi.dev/api/v2/entries/en/"+newword).then(thisdata=>{
     Setdef(" ")
@@ -33,39 +36,52 @@ let datanew = axios.get("https://api.dictionaryapi.dev/api/v2/entries/en/"+newwo
     Setmoremeaning(" ")
     Setmoremeaning2(" ")
     document.getElementById('pid').innerHTML = " "
-    // for(let i=0;i<thisdata.data[0].meanings.length;i++){
-    //     document.getElementById('pid').innerHTML += thisdata.data[0].meanings[i].definitions[0].definition +"</br>"
-    // }
+    document.getElementById('pid2').innerHTML = " "
+    document.getElementById("thisid").style.display = "none";
+
+    let count = 0;
+    for(let i=1;i<thisdata.data[0].meanings.length;i++){
+        if( count == 1){
+        document.getElementById('pid').innerHTML = "<h5> <strong>Definition</strong> : "+thisdata.data[0].meanings[i].definitions[0].definition +"</h5><hr /></br>"
+        count+=1
+    } else{
+        document.getElementById('pid2').innerHTML += "<h5> <strong>Definition</strong> : "+thisdata.data[0].meanings[i].definitions[0].definition +"</h5><hr/></br>"
+
+    }
+}
    
-     
-    if(thisdata.data[0].meanings.length  < 2){
-        document.getElementById("thisid").style.display = "none";
+     console.log(thisdata.data[0].meanings,"data")
+    if(thisdata.data[0].meanings.length  <= 2){
+        Setincorrect(" ")
+        console.log("data this is in",thisdata.data)
+        console.log("Im here")
+        // document.getElementById("thisid").style.display = "none";
         Setdef(thisdata.data[0].meanings[0].definitions[0].definition)
-        Setpartofspeech(thisdata.data[0].meanings[0].partOfSpeech)
+        // Setpartofspeech(thisdata.data[0].meanings[0].partOfSpeech)
     
-        Setpartofspeech2(thisdata.data[0].meanings[1].partOfSpeech)
-        Setmoremeaning(thisdata.data[0].meanings[0].definitions[1].definition)
+        // Setpartofspeech2(thisdata.data[0].meanings[1].partOfSpeech)
+        // Setmoremeaning(thisdata.data[0].meanings[1].definitions[0].definition)
     
-        Setpartofspeech3(thisdata.data[0].meanings[2].partOfSpeech)
-        Setmoremeaning2(thisdata.data[0].meanings[0].definitions[2].definition)
-        Setincorrect(" ")    
+        // Setpartofspeech3(thisdata.data[0].meanings[2].partOfSpeech)
+        // Setmoremeaning2(thisdata.data[0].meanings[2].definitions[0].definition)
 
     }
 
 
     if(thisdata.data[0].meanings.length  > 2){
-        Setincorrect(" ")
+    Setincorrect(" ")
+    console.log("Im here 2")
+
     document.getElementById("thisid").style.display = "none";
     console.log("data this is in",thisdata.data)
     Setdef(thisdata.data[0].meanings[0].definitions[0].definition)
-    Setpartofspeech(thisdata.data[0].meanings[0].partOfSpeech)
+    // Setpartofspeech(thisdata.data[0].meanings[0].partOfSpeech)
 
     // Setpartofspeech2(thisdata.data[0].meanings[1].partOfSpeech)
-    Setmoremeaning(thisdata.data[0].meanings[1].definitions[0].definition)
+    // Setmoremeaning(thisdata.data[0].meanings[1].definitions[0].definition)
 
     // Setpartofspeech3(thisdata.data[0].meanings[2].partOfSpeech)
-    Setmoremeaning2(thisdata.data[0].meanings[2].definitions[0].definition)
-    Setincorrect(" ")
+    // Setmoremeaning2(thisdata.data[0].meanings[2].definitions[0].definition)
     
 
     }
@@ -73,8 +89,9 @@ let datanew = axios.get("https://api.dictionaryapi.dev/api/v2/entries/en/"+newwo
     // return data.data[0].meanings[0].definitions[1].definition
 }).catch(err=>{
     console.error(err)
-    Setincorrect("Incorrect Word")
-     Setdef(" ")
+    Setincorrect(`No Defination Found for ${newword}`)
+    document.getElementById("class").style.display = "none"
+    Setdef(" ")
     Setpartofspeech(" ")
 
     Setmoremeaning(" ")
@@ -102,29 +119,32 @@ let datanew = axios.get("https://api.dictionaryapi.dev/api/v2/entries/en/"+newwo
   
 
 
-
       
         <center>
-        <div className="">
-            <p id='pid'></p>
+            <div className="box">
         <h1>Word : {word}</h1>
-        
-        <h5>Part of Speech : {partofspeech}</h5>
-        <h5>Defination : {def}</h5>
+        </div>
+        <div id="class" className='class' style={{ backgroundColor: "#eee;",width :"50%",boxShadow: "rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px"}}>
+        <p id='pid'></p>
+
+        {/* <h5>Part of Speech : {partofspeech}</h5> */}
+        <h5><strong>Definition </strong>: {def}</h5>
 
 <hr />
 <div id="thisid" style={{display: "none"}}>
         {/* <h5>Part of Speech : {partofspeech2}</h5> */}
-        <h5>Defination : {moremeaning}</h5>
+        <p id='pid2'></p>
+
+        {/* <h5>Defination : {moremeaning}</h5> */}
         <hr />
 
         {/* <h5>Part of Speech : {partofspeech3}</h5> */}
-        <h5>Defination : {moremeaning2}</h5>
+        {/* <h5>Defination : {moremeaning2}</h5> */}
         
         </div>
         </div>
         </center>
-        <button id='btn' className='btn btn-primary ' onClick={()=>{document.getElementById("thisid").style.display = "block"; document.getElementById("btn").style.display = "none"; document.getElementById("btn2").style.display = "block"    }}>Show More Meaning</button>
+        <button id='btn' className='btn btn-primary ' style={{display:"block"}} onClick={()=>{document.getElementById("thisid").style.display = "block"; document.getElementById("btn").style.display = "none"; document.getElementById("btn2").style.display = "block"    }}>Show More Meaning</button>
 
         <button id='btn2' style={{display:"none"}}  className='btn btn-primary ' onClick={()=>{document.getElementById("thisid").style.display = "none"; document.getElementById("btn2").style.display = "none"; document.getElementById("btn").style.display = "block"     }}>Show Less</button>
 

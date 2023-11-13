@@ -197,7 +197,8 @@ if (s !== undefined){
   return (
     <>    
     <br /><br /><br />
-    <div className='container'>
+    
+    <div className='contain'>
         <nav>
         <center><h2><strong>LDU Dictionary</strong></h2></center>
 
@@ -271,6 +272,9 @@ if (s !== undefined){
 
 
     </div>
+    <style>
+      
+    </style>
     </>
 
   )

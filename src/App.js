@@ -8,7 +8,7 @@ import Dictionary from './components/dictionary';
 function App(props) {
   
   return (
-    <>     
+    <>    
    < Dictionary/>
    
     </>

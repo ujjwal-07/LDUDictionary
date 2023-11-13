@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/chatApp/static/css/main.004f1ec3.css",
-    "main.js": "/chatApp/static/js/main.9cfba367.js",
+    "main.css": "/chatApp/static/css/main.19d2af67.css",
+    "main.js": "/chatApp/static/js/main.9d0a3e65.js",
     "static/js/787.20416dff.chunk.js": "/chatApp/static/js/787.20416dff.chunk.js",
     "static/media/Akon - Smack That (Official Music Video) ft. Eminem.mp3": "/chatApp/static/media/Akon - Smack That (Official Music Video) ft. Eminem.35228881c6644bc796be.mp3",
     "static/media/cool-background.png": "/chatApp/static/media/cool-background.9a1bc52706cb44ec74a8.png",
     "index.html": "/chatApp/index.html",
-    "main.004f1ec3.css.map": "/chatApp/static/css/main.004f1ec3.css.map",
-    "main.9cfba367.js.map": "/chatApp/static/js/main.9cfba367.js.map",
+    "main.19d2af67.css.map": "/chatApp/static/css/main.19d2af67.css.map",
+    "main.9d0a3e65.js.map": "/chatApp/static/js/main.9d0a3e65.js.map",
     "787.20416dff.chunk.js.map": "/chatApp/static/js/787.20416dff.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.004f1ec3.css",
-    "static/js/main.9cfba367.js"
+    "static/css/main.19d2af67.css",
+    "static/js/main.9d0a3e65.js"
   ]
 }

@@ -114,20 +114,20 @@ for(let i=0;i<thisdata.data[0].meanings.length;i++){
 } 
 }
 
-if(a == undefined){
+if(a == undefined || a.length <= 1){
   document.getElementById('ant').innerHTML += "<h5> No Antonyms Found for "+newword+"</h5><hr/></br>"
 
 }
-if (s == undefined){
+if (s == undefined || s.length <= 1){
   document.getElementById('syn').innerHTML += "<h5> No Synonyms Found for "+newword+"</h5><hr/></br>"
 
 }
 
-if(a !== undefined){
+if(a !== undefined && a.length > 0){
   document.getElementById('ant').innerHTML = "<h5> <strong>antonyms</strong> : "+a+"</h5><hr/></br>"
 
 }
-if (s !== undefined){
+if (s !== undefined && s.length > 0){
   document.getElementById('syn').innerHTML = "<h5> <strong>synonyms</strong> : "+s+"</h5><hr/></br>"
 
 }

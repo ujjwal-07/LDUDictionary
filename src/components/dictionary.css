@@ -56,9 +56,9 @@ hr{
     
     }
     .container{
-        width: 100%;
+        width: auto;
         opacity: 0.7;
-        margin-left: 29px;
+        margin-left: 39px;    
     }
     .class{
         background-color: #eee;

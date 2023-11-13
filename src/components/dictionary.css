@@ -7,7 +7,7 @@ body{
     background-color: #eee;
     opacity: 0.7;
     width: 50%;
-    margin-left: 398px;
+    margin-left: 423px;
 }
 hr{
     background-color: black;
@@ -43,7 +43,7 @@ hr{
   }
 
   #btn,#btn2,#sanda,#sanda2{
-    margin-left: 308px;
+    margin-left: 304px;
   }
 
   @media only screen and (max-width: 600px) {

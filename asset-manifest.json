@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/chatApp/static/css/main.19d2af67.css",
-    "main.js": "/chatApp/static/js/main.9d0a3e65.js",
-    "static/js/787.20416dff.chunk.js": "/chatApp/static/js/787.20416dff.chunk.js",
-    "static/media/Akon - Smack That (Official Music Video) ft. Eminem.mp3": "/chatApp/static/media/Akon - Smack That (Official Music Video) ft. Eminem.35228881c6644bc796be.mp3",
-    "static/media/cool-background.png": "/chatApp/static/media/cool-background.9a1bc52706cb44ec74a8.png",
-    "index.html": "/chatApp/index.html",
-    "main.19d2af67.css.map": "/chatApp/static/css/main.19d2af67.css.map",
-    "main.9d0a3e65.js.map": "/chatApp/static/js/main.9d0a3e65.js.map",
-    "787.20416dff.chunk.js.map": "/chatApp/static/js/787.20416dff.chunk.js.map"
+    "main.css": "/LDUDictionary/static/css/main.356722ec.css",
+    "main.js": "/LDUDictionary/static/js/main.d14045a7.js",
+    "static/js/787.20416dff.chunk.js": "/LDUDictionary/static/js/787.20416dff.chunk.js",
+    "static/media/Akon - Smack That (Official Music Video) ft. Eminem.mp3": "/LDUDictionary/static/media/Akon - Smack That (Official Music Video) ft. Eminem.35228881c6644bc796be.mp3",
+    "static/media/cool-background.png": "/LDUDictionary/static/media/cool-background.9a1bc52706cb44ec74a8.png",
+    "index.html": "/LDUDictionary/index.html",
+    "main.356722ec.css.map": "/LDUDictionary/static/css/main.356722ec.css.map",
+    "main.d14045a7.js.map": "/LDUDictionary/static/js/main.d14045a7.js.map",
+    "787.20416dff.chunk.js.map": "/LDUDictionary/static/js/787.20416dff.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.19d2af67.css",
-    "static/js/main.9d0a3e65.js"
+    "static/css/main.356722ec.css",
+    "static/js/main.d14045a7.js"
   ]
 }
